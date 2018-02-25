@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+   // implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:0.5'
@@ -33,11 +33,11 @@ dependencies {
     compile 'com.zhy:okhttputils:2.3.9'
     compile 'com.google.code.gson:gson:2.4'
     compile 'org.greenrobot:eventbus:3.1.1'
-    //事件总线
-    implementation files('libs/Android_Map3D_SDK_V6.0.0_20180211.jar')
     compile 'com.github.lmiot:TitleBarSDK:1.5'
+    compile 'com.zhy:okhttputils:2.3.9'
+
+    implementation files('libs/Android_Map3D_SDK_V6.0.0_20180211.jar')
     implementation files('libs/AMap_Location_V3.8.0_20180201.jar')
     implementation files('libs/AMap_Search_V5.7.0_20171229.jar')
-    compile 'com.zhy:okhttputils:2.3.9'
 
 }

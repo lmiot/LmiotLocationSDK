@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.lmiot.locationlibrary.LocationActivity;
 import com.lmiot.locationlibrary.LocationSDK;
+import com.lmiot.locationlibrary.LocationSetBean;
 import com.lmiot.locationlibrary.WeatherBean;
 
 import org.greenrobot.eventbus.EventBus;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         EventBus.getDefault().register(this);
         mTextView = findViewById(R.id.id_weather);
-        LocationSDK.startLocation(getApplicationContext());
+     //   LocationSDK.startLocation(getApplicationContext());
         startActivity(new Intent(MainActivity.this, LocationActivity.class));
     }
 
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(WeatherBean weatherBean) {
         mTextView.setText(new Gson().toJson(weatherBean));
+
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(LocationSetBean locationSetBean) {
+        mTextView.setText(locationSetBean.getName());
 
     }
 }
