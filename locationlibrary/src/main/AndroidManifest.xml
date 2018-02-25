@@ -27,8 +27,7 @@
         android:value="${AMAP_KEY}"
         />
 
-   <!-- android:value="b4269b190d886b958c64a889e0dea7eb"-->
-
+<activity android:name=".LocationActivity" android:screenOrientation="portrait"/>
     <service android:name="com.amap.api.location.APSService"/>
 
 

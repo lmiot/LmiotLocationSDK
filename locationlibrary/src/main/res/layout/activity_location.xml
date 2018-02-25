@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    >
+
+    <com.lmiot.tiblebarlibrary.LmiotTitleBar
+        android:id="@+id/id_lmiot_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_iv_menu="false"
+        app:show_line="false"
+        app:show_tv_menu="true"
+        app:tv_menu="完成"
+        app:text_color_menu="@color/white"
+        app:text_color_title="@color/white"
+        app:tv_title="位置设置"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        >
+
+        <EditText
+            android:id="@+id/id_search_edit"
+            android:hint="搜索您的位置"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            />
+        <ImageView
+            android:id="@+id/id_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search_dev"
+            android:padding="12dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/id_listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+    </ListView>
+    <LinearLayout
+        android:id="@+id/id_map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/id_location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:text="我的家"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

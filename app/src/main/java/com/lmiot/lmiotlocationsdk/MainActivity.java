@@ -1,10 +1,12 @@
 package com.lmiot.lmiotlocationsdk;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.lmiot.locationlibrary.LocationActivity;
 import com.lmiot.locationlibrary.LocationSDK;
 import com.lmiot.locationlibrary.WeatherBean;
 
@@ -12,11 +14,12 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import okio.GzipSource;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextView;
+    //MapView mMapView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);
         mTextView = findViewById(R.id.id_weather);
         LocationSDK.startLocation(getApplicationContext());
+        startActivity(new Intent(MainActivity.this, LocationActivity.class));
     }
 
     @Override

@@ -14,11 +14,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [ AMAP_KEY:"b4269b190d886b958c64a889e0dea7eb" ]
+            manifestPlaceholders = [ AMAP_KEY:"aee20230022a9d4864da4e916c8f2007" ]
         }
 
         debug {
-            manifestPlaceholders = [ AMAP_KEY:"b4269b190d886b958c64a889e0dea7eb" ]
+            manifestPlaceholders = [ AMAP_KEY:"aee20230022a9d4864da4e916c8f2007" ]
         }
     }
 }
